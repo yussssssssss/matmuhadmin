@@ -1,0 +1,235 @@
+/* PDF butonunun stilini ayarlayın */
+.ql-toolbar .ql-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Buton içindeki resmi düzenleyin */
+.ql-toolbar .ql-file img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: brightness(0); /* Siyah renk */
+}
+
+/* Hover durumunda renk değişimi */
+.ql-toolbar .ql-file:hover img {
+  filter: brightness(0.5);
+}
+
+/* Resim hizalama için gerekli CSS */
+img.ql-align-left {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+img.ql-align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.ql-align-right {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Font tanımlamaları */
+.ql-font-arial {
+  font-family: 'Arial', sans-serif;
+}
+.ql-font-times-new-roman {
+  font-family: 'Times New Roman', serif;
+}
+.ql-font-calibri {
+  font-family: 'Calibri', sans-serif;
+}
+.ql-font-verdana {
+  font-family: 'Verdana', sans-serif;
+}
+.ql-font-georgia {
+  font-family: 'Georgia', serif;
+}
+.ql-font-trebuchet-ms {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+.ql-font-garamond {
+  font-family: 'Garamond', serif;
+}
+.ql-font-comic-sans-ms {
+  font-family: 'Comic Sans MS', cursive;
+}
+.ql-font-courier-new {
+  font-family: 'Courier New', monospace;
+}
+.ql-font-tahoma {
+  font-family: 'Tahoma', sans-serif;
+}
+.ql-font-impact {
+  font-family: 'Impact', sans-serif;
+}
+.ql-font-lucida-console {
+  font-family: 'Lucida Console', monospace;
+}
+.ql-font-palatino {
+  font-family: 'Palatino', serif;
+}
+.ql-font-helvetica {
+  font-family: 'Helvetica', sans-serif;
+}
+.ql-font-cambria {
+  font-family: 'Cambria', serif;
+}
+.ql-font-perpetua {
+  font-family: 'Perpetua', serif;
+}
+.ql-font-bookman {
+  font-family: 'Bookman', serif;
+}
+.ql-font-rockwell {
+  font-family: 'Rockwell', serif;
+}
+.ql-font-candara {
+  font-family: 'Candara', sans-serif;
+}
+.ql-font-franklin-gothic-medium {
+  font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+/* Araç çubuğunda font isimlerinin kendi fontuyla görüntülenmesi */
+#toolbar .ql-font option {
+  font-family: inherit;
+}
+
+/* Yazı tipi ve boyut menülerinin kaydırılabilir olması için sınırla */
+.ql-toolbar .ql-picker.ql-font .ql-picker-options,
+.ql-toolbar .ql-picker.ql-size .ql-picker-options {
+  max-height: 300px; /* Açılır menünün maksimum yüksekliği */
+  overflow-y: auto; /* Kaydırılabilir hale getir */
+  z-index: 20; /* Menülerin her zaman görünür olması için yüksek z-index kullan */
+}
+
+/* Araç çubuğu düğmelerinin boyutu ve düzeni */
+.ql-toolbar button,
+.ql-toolbar select {
+  padding: 5px;
+  margin: 2px;
+}
+
+/* Araç çubuğunun taşmasına izin ver */
+#toolbar {
+  overflow: visible; /* Araç çubuğunun sınırlarının dışına çıkmasına izin ver */
+  position: relative;
+}
+
+/* Modal içerik stili */
+.modal-content {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 90vw; /* Ekranın genişliğinin %90'ını kaplasın */
+  max-height: 85vh; /* Ekranın yüksekliğinin %85'ini kaplasın */
+  width: 100%;
+  overflow-y: auto; /* İçerik uzun olursa kaydırma çubuğu ekle */
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1001; /* Öne çıkması için yüksek bir z-index verildi */
+}
+
+/* Modal arka plan (overlay) stili */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+/* Modal butonları */
+.modal-content button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-content .bg-gray-500 {
+  background-color: #6b7280; /* Gri renk */
+}
+
+.modal-content .bg-gray-500:hover {
+  background-color: #4b5563; /* Hover için daha koyu gri */
+}
+
+.modal-content .bg-blue-500 {
+  background-color: #3b82f6; /* Mavi renk */
+}
+
+.modal-content .bg-blue-500:hover {
+  background-color: #2563eb; /* Hover için daha koyu mavi */
+}
+
+/* Duyuru kartı stili */
+.announcement-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+}
+
+.announcement-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* Önizleme düğmesi, düzenle düğmesi ve sil düğmesi */
+.announcement-card button {
+  transition: color 0.2s;
+}
+
+.announcement-card .text-blue-500:hover {
+  color: #2563eb;
+}
+
+.announcement-card .text-red-500:hover {
+  color: #dc2626;
+}
+
+/* Genel duyuru yönetimi başlık ve düğme stili */
+#announcement-management-header {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+#announcement-add-button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6; /* Mavi */
+  color: #ffffff;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+#announcement-add-button:hover {
+  background-color: #2563eb; /* Daha koyu mavi */
+}
